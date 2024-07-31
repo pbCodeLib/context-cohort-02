@@ -1,0 +1,45 @@
+name: Autograding Tests
+on:
+  - push
+  - workflow_dispatch
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    env:
+      TEST_DIR: src/tests
+      REQUIREMENTS: requirements-dev.txt
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.12'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ${{ env.REQUIREMENTS }}
+
+    - name: Run tests
+      uses: classroom-resources/autograding-io-grader@v1
+      id: run-pytest
+      with:
+        test-name: "Run pytest"
+        command: "python -m pytest ${{ env.TEST_DIR }}"
+        comparison-method: exact
+        timeout: 300
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PYTEST_RESULTS: "${{ steps.run-pytest.outputs.result }}"
+      with:
+        runners: run-pytest
