@@ -33,7 +33,7 @@ jobs:
       id: run-pytest
       with:
         test-name: "Run pytest"
-        command: "python -m pytest --tb=no -q ${{ env.TEST_DIR }} > /dev/null 2>&1 && echo 'passed' || echo 'failed'  "
+        command: "python -m pytest --tb=no -q ${{ env.TEST_DIR }} > /dev/null 2>&1 && echo 'passed' || echo 'failed'"
         comparison-method: exact
         expected-output: "passed"
         timeout: 300
@@ -41,6 +41,6 @@ jobs:
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
-        PYTEST_RESULTS: "${{ steps.addition - test.outputs.result }}"
+        PYTEST_RESULTS: "${{ steps.run-pytest.outputs.result }}"
       with:
         runners: run-pytest
