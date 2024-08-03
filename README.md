@@ -1,6 +1,6 @@
 # About this Repository
 
-This repository contains the starter code and instructions for a research project. Participants in the research project are expected to complete a programming [assignment](/assignment.md).
+This repository contains the starter code and instructions for a research project. Participants in the research project are expected to complete a programming assignment.
 
 
 ## Project Structure
