@@ -1,10 +1,11 @@
-# Crowdbotics Codespace Starter
+# About this Repository
 
-This repository contains the starter template for a GitHub Codespace that is preconfigured for this research project.
+This repository contains the starter code and instructions for a research project. Participants in the research project are expected to complete a programming [assignment](/assignment.md).
 
-## Contents
 
-This codespace template includes the following:
+## Project Structure
+
+The repository is structured as a DevContainer and contains the following features:
 
 - A Python 3.12 environment installed from the default Microsoft Devcontainer registry.
 - A Docker configuration for local and web codespaces development, including a PostgreSQL database.
@@ -68,13 +69,13 @@ docker-compose up --build
 
 This project uses Alembic to manage migrations and changes to the database.
 
-1.Create a new migration after updating the models:
+1. Create a new migration after updating the models:
 
 ```sh
 alembic revision --autogenerate -m "Update models with correct table names and relationships"
 ```
 
-2.Apply the migrations:
+2. Apply the migrations:
 
 ```sh
 alembic upgrade head
