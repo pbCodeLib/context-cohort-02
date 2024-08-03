@@ -31,6 +31,7 @@ The repository is structured as a DevContainer and contains the following featur
 
 ### Preinstalled VS Code Extensions
 
+- GitHub Copilot
 - Python
 - Pylance
 - Black formatter

@@ -22,7 +22,8 @@
         "ms-python.vscode-pylance",
         "ms-python.black-formatter",
         "mtxr.sqltools",
-        "mtxr.sqltools-driver-pg"
+        "mtxr.sqltools-driver-pg",
+        "GitHub.copilot"
       ],
       // Configure VSCode settings
       "settings": {
