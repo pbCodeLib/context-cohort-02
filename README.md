@@ -1,7 +1,10 @@
-# About this Repository
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/crowdbotics-research-projects/context-cohort-02)
 
-This repository contains the starter code and instructions for a research project. Participants in the research project are expected to complete a programming assignment.
+# Project Details
 
+Welcome and thank you for being part of this research project. You are in Cohort 2 and you can find details on how to get started [here](https://crowdbotics.notion.site/Cohort-2-ae7487ffc1d54ca2a603cd6ec492169d?pvs=4).
+
+Project requirements are located [here](https://crowdbotics.notion.site/Project-Requirements-c886f74c68a94098a1fd463c59471795?pvs=4).
 
 ## Project Structure
 
@@ -31,7 +34,6 @@ The repository is structured as a DevContainer and contains the following featur
 
 ### Preinstalled VS Code Extensions
 
-- GitHub Copilot
 - Python
 - Pylance
 - Black formatter
@@ -41,7 +43,7 @@ The repository is structured as a DevContainer and contains the following featur
 
 ### Github Codespaces on the Web
 
-Open the repository on Github as a Codespace.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/crowdbotics-research-projects/context-cohort-02)
 
 ### Local Development
 
